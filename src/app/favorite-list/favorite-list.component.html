@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-Favorite-edit></app-Favorite-edit>
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let Song of Songs; let i = index"
+        (click)="onEditItem(i)"
+      >
+        {{ Song.name }} ({{ Song.duration }})
+      </a>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<a
+  href="#"
+  class="list-group-item clearfix"
+  *ngFor="let album of albums">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ album.name }}</h4>
+    <p class="list-group-item-text">{{ album.artist }}</p>
+  </div>
+  <span>
+        <img
+          [src]="album.imagePath"
+          alt="{{ album.name }}"
+          class="img-responsive"
+          style="max-height: 500px">
+      </span>
+</a>
